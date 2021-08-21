@@ -53,6 +53,7 @@ class EasyCalculator(QtCore.QObject):
 Now we support the following operations:
 addition (+), subtraction (-), multiplication (*), division(/),
 modulo (%) and exponentiation (^).
+Use "_" to indicate the answer of the last expression.
 The expression should not exceed the limit of {EXPR_LENGTH_LIMIT} characters.
 --------------------------------------'''
         self.utils.tell(player, help_msg)
