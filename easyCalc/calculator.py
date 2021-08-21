@@ -58,5 +58,5 @@ class Calculator(Transformer):
 
 
 def get_parser():
-    parser = Lark_StandAlone(transformer=Calculator)
+    parser = Lark_StandAlone(transformer=Calculator())
     return parser
