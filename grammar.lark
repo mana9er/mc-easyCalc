@@ -4,12 +4,12 @@
 
 ADDOP: "+" | "-"
 
-add : mul                   -> add1
+add : mul             -> add1
     | add ADDOP mul   -> add2
 
 MULOP: "*" | "/" | "%"
 
-mul : pow                       -> mul1
+mul : pow           -> mul1
     | mul MULOP pow -> mul2
 
 pow : unary         -> pow1
@@ -18,7 +18,7 @@ pow : unary         -> pow1
 UNARYOP: "-" | "+"
 
 unary : UNARYOP unary -> unary1
-      | primary           -> unary2
+      | primary       -> unary2
 
 primary : "(" expr ")"  -> primary1
         | NUMBER        -> primary2
