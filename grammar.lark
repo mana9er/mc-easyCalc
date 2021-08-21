@@ -1,0 +1,29 @@
+?start: expr
+
+?expr : add
+
+ADDOP: "+" | "-"
+
+add : mul                   -> add1
+    | add ADDOP mul   -> add2
+
+MULOP: "*" | "/" | "%"
+
+mul : pow                       -> mul1
+    | mul MULOP pow -> mul2
+
+pow : unary         -> pow1
+    | unary "^" pow -> pow2
+
+UNARYOP: "-" | "+"
+
+unary : UNARYOP unary -> unary1
+      | primary           -> unary2
+
+primary : "(" expr ")"  -> primary1
+        | NUMBER        -> primary2
+        | "_"           -> primary3
+
+%import common.WS
+%import common.SIGNED_NUMBER  -> NUMBER
+%ignore WS
