@@ -1,5 +1,5 @@
 import math
-from generated_parser import Lark_StandAlone, Transformer
+from .generated_parser import Lark_StandAlone, Transformer
 
 
 POW_LIMIT = 1e8
