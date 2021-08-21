@@ -42,7 +42,7 @@ class EasyCalculator(QtCore.QObject):
             ans = 'result too large'
         except:
             ans = 'unacceptable expression'
-        self.utils.say(ans)
+        self.utils.say('[EasyCalc] ' + ans)
     
     def help(self, player):
         help_msg = f'''\
@@ -68,4 +68,6 @@ The expression should not exceed the limit of {EXPR_LENGTH_LIMIT} characters.
             elif expr.strip() == 'help':
                 self.help(player)
             else:
+                if player.is_console():
+                    self.utils.say(text)
                 self.calc(expr)
