@@ -18,7 +18,7 @@ For a simple example:
 Then the server should show (broadcasting using `/say`):
 
 ```
-[Server] 1728
+[Server] [EasyCalc] 1728
 ```
 
 You can use `_` to indicate the answer of last expression (notice that this is shared by all players, which allows you to use the answer of other player's expression):
@@ -30,7 +30,7 @@ You can use `_` to indicate the answer of last expression (notice that this is s
 The server should show:
 
 ```
-[Server] 1729
+[Server] [EasyCalc] 1729
 ```
 
 ## Parser
